@@ -1,0 +1,108 @@
+{
+ "id": "garage-cabinets-imperial",
+ "title": "Garage wall and base cabinets with bench top",
+ "category": "designed",
+ "furniture": "Three 36 in wall cabinets, two 36 in base cabinets and a doubled 72 in bench top",
+ "why": "Inch-derived non-integer millimetre sizes and a 3.175 mm kerf on a true 1219.2 x 2438.4 sheet",
+ "units": "mm",
+ "kerf_mm": 3.175,
+ "boards": [
+  {
+   "code": "PLY34-48x96",
+   "name": "Plywood 3/4 in, 48 x 96 in",
+   "material": "Plywood",
+   "length_mm": 2438.3999999999996,
+   "width_mm": 1219.1999999999998,
+   "thickness_mm": 19.049999999999997,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Wall cabinet side",
+   "board": "PLY34-48x96",
+   "length_mm": 762.0,
+   "width_mm": 304.8,
+   "quantity": 6,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Wall cabinet top/bottom",
+   "board": "PLY34-48x96",
+   "length_mm": 876.3,
+   "width_mm": 304.8,
+   "quantity": 6,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Wall cabinet shelf",
+   "board": "PLY34-48x96",
+   "length_mm": 873.125,
+   "width_mm": 279.4,
+   "quantity": 6,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Wall cabinet door",
+   "board": "PLY34-48x96",
+   "length_mm": 755.65,
+   "width_mm": 454.025,
+   "quantity": 6,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base cabinet side",
+   "board": "PLY34-48x96",
+   "length_mm": 876.3,
+   "width_mm": 590.55,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base cabinet bottom",
+   "board": "PLY34-48x96",
+   "length_mm": 876.3,
+   "width_mm": 590.55,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Base stretcher",
+   "board": "PLY34-48x96",
+   "length_mm": 876.3,
+   "width_mm": 101.6,
+   "quantity": 6,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Base shelf",
+   "board": "PLY34-48x96",
+   "length_mm": 873.125,
+   "width_mm": 558.8,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Bench top layer",
+   "board": "PLY34-48x96",
+   "length_mm": 1828.8,
+   "width_mm": 635.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Toe kick",
+   "board": "PLY34-48x96",
+   "length_mm": 1828.8,
+   "width_mm": 101.6,
+   "quantity": 1,
+   "grain_direction": "any"
+  }
+ ]
+}

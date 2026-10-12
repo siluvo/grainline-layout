@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grainline-core"
+version = "0.1.0.dev0"
+description = "Grain-aware sheet cutting layouts and guillotine cutting plans for panel stock"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = []
+keywords = ["cutting-stock", "cut-list", "nesting", "guillotine", "woodworking", "plywood"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Homepage = "https://siluvo.com"
+Repository = "https://github.com/siluvo/grainline-layout"
+Issues = "https://github.com/siluvo/grainline-layout/issues"
+
+[project.scripts]
+grainline = "grainline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

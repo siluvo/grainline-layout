@@ -1,0 +1,68 @@
+{
+ "id": "syn-long-and-small",
+ "title": "long and small",
+ "category": "synthetic",
+ "furniture": "Synthetic probe",
+ "why": "Long grain-locked parts plus many small free-rotation fillers",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18",
+   "name": "Birch plywood 18 mm, 2440 x 1220",
+   "material": "Plywood",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "P01",
+   "board": "PLY18",
+   "length_mm": 2200.0,
+   "width_mm": 350.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P02",
+   "board": "PLY18",
+   "length_mm": 1980.0,
+   "width_mm": 290.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P03",
+   "board": "PLY18",
+   "length_mm": 1100.0,
+   "width_mm": 480.0,
+   "quantity": 4,
+   "grain_direction": "any"
+  },
+  {
+   "name": "P04",
+   "board": "PLY18",
+   "length_mm": 520.0,
+   "width_mm": 260.0,
+   "quantity": 12,
+   "grain_direction": "any"
+  },
+  {
+   "name": "P05",
+   "board": "PLY18",
+   "length_mm": 360.0,
+   "width_mm": 180.0,
+   "quantity": 12,
+   "grain_direction": "any"
+  }
+ ]
+}

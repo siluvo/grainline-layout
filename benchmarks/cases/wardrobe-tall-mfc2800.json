@@ -1,0 +1,131 @@
+{
+ "id": "wardrobe-tall-mfc2800",
+ "title": "Two-bay wardrobe 1800 x 2400 x 580",
+ "category": "designed",
+ "furniture": "Full-height wardrobe with four doors, internal drawers and shelves",
+ "why": "Parts longer than the 2070 sheet width can only run along the 2800 edge; tall doors and sides compete for the same strips",
+ "units": "mm",
+ "kerf_mm": 4.4,
+ "boards": [
+  {
+   "code": "MFC18-2800",
+   "name": "Melamine-faced chipboard 18 mm, 2800 x 2070",
+   "material": "Melamine chipboard",
+   "length_mm": 2800.0,
+   "width_mm": 2070.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 10,
+    "bottom": 10,
+    "left": 10,
+    "right": 10
+   }
+  },
+  {
+   "code": "HDF3",
+   "name": "HDF back panel 3 mm, 2440 x 1220",
+   "material": "HDF",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 3.0,
+   "grain_axis": "none",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Wardrobe side",
+   "board": "MFC18-2800",
+   "length_mm": 2400.0,
+   "width_mm": 580.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Wardrobe divider",
+   "board": "MFC18-2800",
+   "length_mm": 2264.0,
+   "width_mm": 560.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Wardrobe top/bottom",
+   "board": "MFC18-2800",
+   "length_mm": 1764.0,
+   "width_mm": 580.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Plinth front",
+   "board": "MFC18-2800",
+   "length_mm": 1764.0,
+   "width_mm": 100.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Fixed shelf",
+   "board": "MFC18-2800",
+   "length_mm": 873.0,
+   "width_mm": 560.0,
+   "quantity": 4,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Adjustable shelf",
+   "board": "MFC18-2800",
+   "length_mm": 871.0,
+   "width_mm": 540.0,
+   "quantity": 6,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Door",
+   "board": "MFC18-2800",
+   "length_mm": 2296.0,
+   "width_mm": 447.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer front",
+   "board": "MFC18-2800",
+   "length_mm": 867.0,
+   "width_mm": 180.0,
+   "quantity": 3,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer side",
+   "board": "MFC18-2800",
+   "length_mm": 500.0,
+   "width_mm": 150.0,
+   "quantity": 6,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Drawer box front/back",
+   "board": "MFC18-2800",
+   "length_mm": 799.0,
+   "width_mm": 150.0,
+   "quantity": 6,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Wardrobe back",
+   "board": "HDF3",
+   "length_mm": 2380.0,
+   "width_mm": 890.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "syn-impossible-area-bound",
+ "title": "impossible area bound",
+ "category": "synthetic",
+ "furniture": "Synthetic probe",
+ "why": "Each part exceeds half the sheet on both axes, so 4 sheets are needed although the area bound says 2",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18",
+   "name": "Birch plywood 18 mm, 2440 x 1220",
+   "material": "Plywood",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "P01",
+   "board": "PLY18",
+   "length_mm": 1300.0,
+   "width_mm": 650.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  }
+ ]
+}

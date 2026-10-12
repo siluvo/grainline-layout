@@ -1,0 +1,60 @@
+{
+ "id": "syn-grain-locked",
+ "title": "grain locked",
+ "category": "synthetic",
+ "furniture": "Synthetic probe",
+ "why": "Every part grain-locked",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18",
+   "name": "Birch plywood 18 mm, 2440 x 1220",
+   "material": "Plywood",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "P01",
+   "board": "PLY18",
+   "length_mm": 1650.0,
+   "width_mm": 510.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P02",
+   "board": "PLY18",
+   "length_mm": 950.0,
+   "width_mm": 610.0,
+   "quantity": 6,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P03",
+   "board": "PLY18",
+   "length_mm": 810.0,
+   "width_mm": 390.0,
+   "quantity": 6,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P04",
+   "board": "PLY18",
+   "length_mm": 570.0,
+   "width_mm": 330.0,
+   "quantity": 8,
+   "grain_direction": "length"
+  }
+ ]
+}

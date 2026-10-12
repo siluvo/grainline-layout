@@ -1,0 +1,192 @@
+{
+ "bookcase-pair-ply2500": {
+  "category": "designed",
+  "boards": {
+   "PLY18-2500": {
+    "pieces": 24,
+    "area_lower_bound": 2,
+    "grainline_sheets": 3
+   }
+  }
+ },
+ "cabinet-set-49": {
+  "category": "designed",
+  "boards": {
+   "PLY18": {
+    "pieces": 30,
+    "area_lower_bound": 5,
+    "grainline_sheets": 5
+   },
+   "MDF18": {
+    "pieces": 19,
+    "area_lower_bound": 1,
+    "grainline_sheets": 1
+   }
+  }
+ },
+ "cube-storage-jp1820": {
+  "category": "designed",
+  "boards": {
+   "LAUAN12-1820": {
+    "pieces": 22,
+    "area_lower_bound": 3,
+    "grainline_sheets": 3
+   }
+  }
+ },
+ "drawer-bank-baltic1525": {
+  "category": "designed",
+  "boards": {
+   "BB12-1525": {
+    "pieces": 48,
+    "area_lower_bound": 2,
+    "grainline_sheets": 2
+   },
+   "BB6-1525": {
+    "pieces": 12,
+    "area_lower_bound": 2,
+    "grainline_sheets": 2
+   }
+  }
+ },
+ "floating-shelves-strips": {
+  "category": "designed",
+  "boards": {
+   "PLY18": {
+    "pieces": 52,
+    "area_lower_bound": 2,
+    "grainline_sheets": 2
+   }
+  }
+ },
+ "garage-cabinets-imperial": {
+  "category": "designed",
+  "boards": {
+   "PLY34-48x96": {
+    "pieces": 41,
+    "area_lower_bound": 5,
+    "grainline_sheets": 6
+   }
+  }
+ },
+ "kids-desk-single-sheet": {
+  "category": "designed",
+  "boards": {
+   "PLY18": {
+    "pieces": 10,
+    "area_lower_bound": 1,
+    "grainline_sheets": 1
+   }
+  }
+ },
+ "kitchen-base-ply2440-trim": {
+  "category": "designed",
+  "boards": {
+   "PLY18": {
+    "pieces": 29,
+    "area_lower_bound": 3,
+    "grainline_sheets": 4
+   }
+  }
+ },
+ "kitchen-base-run-mfc2800": {
+  "category": "designed",
+  "boards": {
+   "MFC18-2800": {
+    "pieces": 48,
+    "area_lower_bound": 3,
+    "grainline_sheets": 3
+   },
+   "HDF3": {
+    "pieces": 6,
+    "area_lower_bound": 1,
+    "grainline_sheets": 1
+   }
+  }
+ },
+ "syn-grain-locked": {
+  "category": "synthetic",
+  "boards": {
+   "PLY18": {
+    "pieces": 24,
+    "area_lower_bound": 4,
+    "grainline_sheets": 5
+   }
+  }
+ },
+ "syn-impossible-area-bound": {
+  "category": "synthetic",
+  "boards": {
+   "PLY18": {
+    "pieces": 4,
+    "area_lower_bound": 2,
+    "grainline_sheets": 4
+   }
+  }
+ },
+ "syn-long-and-small": {
+  "category": "synthetic",
+  "boards": {
+   "PLY18": {
+    "pieces": 36,
+    "area_lower_bound": 4,
+    "grainline_sheets": 4
+   }
+  }
+ },
+ "syn-mixed-seeded": {
+  "category": "synthetic",
+  "boards": {
+   "PLY18": {
+    "pieces": 29,
+    "area_lower_bound": 4,
+    "grainline_sheets": 6
+   }
+  }
+ },
+ "syn-repeated-cabinets": {
+  "category": "synthetic",
+  "boards": {
+   "PLY18": {
+    "pieces": 36,
+    "area_lower_bound": 5,
+    "grainline_sheets": 6
+   }
+  }
+ },
+ "syn-rotation-allowed": {
+  "category": "synthetic",
+  "boards": {
+   "PLY18": {
+    "pieces": 24,
+    "area_lower_bound": 4,
+    "grainline_sheets": 5
+   }
+  }
+ },
+ "tv-wall-unit-ply3050": {
+  "category": "designed",
+  "boards": {
+   "PLY18-3050": {
+    "pieces": 24,
+    "area_lower_bound": 3,
+    "grainline_sheets": 3
+   }
+  }
+ },
+ "wardrobe-tall-mfc2800": {
+  "category": "designed",
+  "boards": {
+   "MFC18-2800": {
+    "pieces": 35,
+    "area_lower_bound": 3,
+    "grainline_sheets": 4
+   },
+   "HDF3": {
+    "pieces": 2,
+    "area_lower_bound": 2,
+    "grainline_sheets": 2
+   }
+  }
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "id": "syn-mixed-seeded",
+ "title": "mixed seeded",
+ "category": "synthetic",
+ "furniture": "Synthetic probe",
+ "why": "Fourteen random part sizes, fixed seed",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18",
+   "name": "Birch plywood 18 mm, 2440 x 1220",
+   "material": "Plywood",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "P01",
+   "board": "PLY18",
+   "length_mm": 1650.0,
+   "width_mm": 400.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P02",
+   "board": "PLY18",
+   "length_mm": 1110.0,
+   "width_mm": 210.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P03",
+   "board": "PLY18",
+   "length_mm": 1620.0,
+   "width_mm": 200.0,
+   "quantity": 3,
+   "grain_direction": "any"
+  },
+  {
+   "name": "P04",
+   "board": "PLY18",
+   "length_mm": 1280.0,
+   "width_mm": 310.0,
+   "quantity": 3,
+   "grain_direction": "any"
+  },
+  {
+   "name": "P05",
+   "board": "PLY18",
+   "length_mm": 1600.0,
+   "width_mm": 190.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "P06",
+   "board": "PLY18",
+   "length_mm": 1010.0,
+   "width_mm": 270.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P07",
+   "board": "PLY18",
+   "length_mm": 1560.0,
+   "width_mm": 570.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "P08",
+   "board": "PLY18",
+   "length_mm": 750.0,
+   "width_mm": 340.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P09",
+   "board": "PLY18",
+   "length_mm": 910.0,
+   "width_mm": 370.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P10",
+   "board": "PLY18",
+   "length_mm": 1700.0,
+   "width_mm": 240.0,
+   "quantity": 3,
+   "grain_direction": "any"
+  },
+  {
+   "name": "P11",
+   "board": "PLY18",
+   "length_mm": 1550.0,
+   "width_mm": 220.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P12",
+   "board": "PLY18",
+   "length_mm": 1270.0,
+   "width_mm": 410.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "P13",
+   "board": "PLY18",
+   "length_mm": 1580.0,
+   "width_mm": 320.0,
+   "quantity": 3,
+   "grain_direction": "any"
+  },
+  {
+   "name": "P14",
+   "board": "PLY18",
+   "length_mm": 520.0,
+   "width_mm": 250.0,
+   "quantity": 3,
+   "grain_direction": "any"
+  }
+ ]
+}

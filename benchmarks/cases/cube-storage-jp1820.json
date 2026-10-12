@@ -1,0 +1,68 @@
+{
+ "id": "cube-storage-jp1820",
+ "title": "Two cube storage units 900 x 1200 x 290",
+ "category": "designed",
+ "furniture": "Open cube shelving in 12 mm lauan",
+ "why": "Small 1820 x 910 sheet: parts are large relative to the sheet, so pairing choices dominate",
+ "units": "mm",
+ "kerf_mm": 2.0,
+ "boards": [
+  {
+   "code": "LAUAN12-1820",
+   "name": "Lauan plywood 12 mm, 1820 x 910",
+   "material": "Plywood",
+   "length_mm": 1820.0,
+   "width_mm": 910.0,
+   "thickness_mm": 12.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Unit side",
+   "board": "LAUAN12-1820",
+   "length_mm": 1200.0,
+   "width_mm": 290.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Unit top/bottom",
+   "board": "LAUAN12-1820",
+   "length_mm": 876.0,
+   "width_mm": 290.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Horizontal shelf",
+   "board": "LAUAN12-1820",
+   "length_mm": 876.0,
+   "width_mm": 280.0,
+   "quantity": 4,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Vertical divider",
+   "board": "LAUAN12-1820",
+   "length_mm": 382.0,
+   "width_mm": 280.0,
+   "quantity": 8,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Kick board",
+   "board": "LAUAN12-1820",
+   "length_mm": 876.0,
+   "width_mm": 60.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  }
+ ]
+}

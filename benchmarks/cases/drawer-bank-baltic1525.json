@@ -1,0 +1,115 @@
+{
+ "id": "drawer-bank-baltic1525",
+ "title": "Twelve drawer boxes in four heights",
+ "category": "designed",
+ "furniture": "Drawer boxes 538 wide x 500 deep for a workshop drawer bank",
+ "why": "Square 1525 x 1525 sheet; highly repeated narrow grain-locked parts in four heights; twelve equal bottoms",
+ "units": "mm",
+ "kerf_mm": 3.2,
+ "boards": [
+  {
+   "code": "BB12-1525",
+   "name": "Baltic birch 12 mm, 1525 x 1525",
+   "material": "Plywood",
+   "length_mm": 1525.0,
+   "width_mm": 1525.0,
+   "thickness_mm": 12.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  },
+  {
+   "code": "BB6-1525",
+   "name": "Baltic birch 6 mm, 1525 x 1525",
+   "material": "Plywood",
+   "length_mm": 1525.0,
+   "width_mm": 1525.0,
+   "thickness_mm": 6.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Drawer side h90",
+   "board": "BB12-1525",
+   "length_mm": 500.0,
+   "width_mm": 90.0,
+   "quantity": 8,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer front/back h90",
+   "board": "BB12-1525",
+   "length_mm": 514.0,
+   "width_mm": 90.0,
+   "quantity": 8,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer side h140",
+   "board": "BB12-1525",
+   "length_mm": 500.0,
+   "width_mm": 140.0,
+   "quantity": 8,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer front/back h140",
+   "board": "BB12-1525",
+   "length_mm": 514.0,
+   "width_mm": 140.0,
+   "quantity": 8,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer side h190",
+   "board": "BB12-1525",
+   "length_mm": 500.0,
+   "width_mm": 190.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer front/back h190",
+   "board": "BB12-1525",
+   "length_mm": 514.0,
+   "width_mm": 190.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer side h240",
+   "board": "BB12-1525",
+   "length_mm": 500.0,
+   "width_mm": 240.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer front/back h240",
+   "board": "BB12-1525",
+   "length_mm": 514.0,
+   "width_mm": 240.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer bottom",
+   "board": "BB6-1525",
+   "length_mm": 526.0,
+   "width_mm": 488.0,
+   "quantity": 12,
+   "grain_direction": "any"
+  }
+ ]
+}

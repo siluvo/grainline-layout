@@ -1,0 +1,108 @@
+{
+ "id": "tv-wall-unit-ply3050",
+ "title": "Low TV wall unit 2900 long with floating shelves",
+ "category": "designed",
+ "furniture": "2.9 m media unit with doors, drawers and two long wall shelves",
+ "why": "Seven parts near the full 3050 sheet length; continuous grain across fronts; little room for end fillers",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18-3050",
+   "name": "Oak-veneered plywood 18 mm, 3050 x 1220",
+   "material": "Plywood",
+   "length_mm": 3050.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Unit top",
+   "board": "PLY18-3050",
+   "length_mm": 2900.0,
+   "width_mm": 420.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Unit bottom",
+   "board": "PLY18-3050",
+   "length_mm": 2864.0,
+   "width_mm": 420.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Wall shelf",
+   "board": "PLY18-3050",
+   "length_mm": 2900.0,
+   "width_mm": 240.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Shelf upstand",
+   "board": "PLY18-3050",
+   "length_mm": 2900.0,
+   "width_mm": 80.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "End panel",
+   "board": "PLY18-3050",
+   "length_mm": 432.0,
+   "width_mm": 420.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Divider",
+   "board": "PLY18-3050",
+   "length_mm": 414.0,
+   "width_mm": 400.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Door",
+   "board": "PLY18-3050",
+   "length_mm": 568.0,
+   "width_mm": 426.0,
+   "quantity": 3,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Drawer front",
+   "board": "PLY18-3050",
+   "length_mm": 568.0,
+   "width_mm": 210.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Inner shelf",
+   "board": "PLY18-3050",
+   "length_mm": 560.0,
+   "width_mm": 380.0,
+   "quantity": 3,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Back rail",
+   "board": "PLY18-3050",
+   "length_mm": 2864.0,
+   "width_mm": 90.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  }
+ ]
+}

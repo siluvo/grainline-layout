@@ -1,0 +1,84 @@
+{
+ "id": "kids-desk-single-sheet",
+ "title": "Desk and stool for a child from one sheet",
+ "category": "designed",
+ "furniture": "Small desk 1000 x 500 x 718 and a matching stool",
+ "why": "About half a sheet is used; the result is judged on how large and square the remaining offcut is",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18",
+   "name": "Birch plywood 18 mm, 2440 x 1220",
+   "material": "Plywood",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Desk top",
+   "board": "PLY18",
+   "length_mm": 1000.0,
+   "width_mm": 500.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Desk side",
+   "board": "PLY18",
+   "length_mm": 700.0,
+   "width_mm": 480.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Desk back rail",
+   "board": "PLY18",
+   "length_mm": 964.0,
+   "width_mm": 150.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Drawer front",
+   "board": "PLY18",
+   "length_mm": 460.0,
+   "width_mm": 120.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Stool top",
+   "board": "PLY18",
+   "length_mm": 320.0,
+   "width_mm": 320.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Stool side",
+   "board": "PLY18",
+   "length_mm": 380.0,
+   "width_mm": 300.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Stool rail",
+   "board": "PLY18",
+   "length_mm": 284.0,
+   "width_mm": 80.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  }
+ ]
+}

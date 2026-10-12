@@ -1,0 +1,188 @@
+{
+ "id": "kitchen-base-ply2440-trim",
+ "title": "Four plywood base cabinets with edge trim",
+ "category": "designed",
+ "furniture": "Base cabinets 400/600/600/800 wide in birch plywood",
+ "why": "12 mm trim on all four sheet edges leaves 2416 x 1196 usable; tests that trim is respected and how it changes strip planning",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18",
+   "name": "Birch plywood 18 mm, 2440 x 1220, 12 mm trim",
+   "material": "Plywood",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 12,
+    "bottom": 12,
+    "left": 12,
+    "right": 12
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Base 400 side",
+   "board": "PLY18",
+   "length_mm": 720.0,
+   "width_mm": 560.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 400 bottom",
+   "board": "PLY18",
+   "length_mm": 364.0,
+   "width_mm": 560.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 400 top stretcher",
+   "board": "PLY18",
+   "length_mm": 364.0,
+   "width_mm": 100.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 400 shelf",
+   "board": "PLY18",
+   "length_mm": 363.0,
+   "width_mm": 540.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Base 400 door",
+   "board": "PLY18",
+   "length_mm": 716.0,
+   "width_mm": 396.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 600 side",
+   "board": "PLY18",
+   "length_mm": 720.0,
+   "width_mm": 560.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 600 bottom",
+   "board": "PLY18",
+   "length_mm": 564.0,
+   "width_mm": 560.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 600 top stretcher",
+   "board": "PLY18",
+   "length_mm": 564.0,
+   "width_mm": 100.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 600 shelf",
+   "board": "PLY18",
+   "length_mm": 563.0,
+   "width_mm": 540.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Base 600 door",
+   "board": "PLY18",
+   "length_mm": 716.0,
+   "width_mm": 596.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 600 side",
+   "board": "PLY18",
+   "length_mm": 720.0,
+   "width_mm": 560.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 600 bottom",
+   "board": "PLY18",
+   "length_mm": 564.0,
+   "width_mm": 560.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 600 top stretcher",
+   "board": "PLY18",
+   "length_mm": 564.0,
+   "width_mm": 100.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 600 shelf",
+   "board": "PLY18",
+   "length_mm": 563.0,
+   "width_mm": 540.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Base 600 door",
+   "board": "PLY18",
+   "length_mm": 716.0,
+   "width_mm": 596.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 800 side",
+   "board": "PLY18",
+   "length_mm": 720.0,
+   "width_mm": 560.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 800 bottom",
+   "board": "PLY18",
+   "length_mm": 764.0,
+   "width_mm": 560.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 800 top stretcher",
+   "board": "PLY18",
+   "length_mm": 764.0,
+   "width_mm": 100.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Base 800 shelf",
+   "board": "PLY18",
+   "length_mm": 763.0,
+   "width_mm": 540.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Base 800 door",
+   "board": "PLY18",
+   "length_mm": 716.0,
+   "width_mm": 397.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  }
+ ]
+}

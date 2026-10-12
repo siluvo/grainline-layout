@@ -1,0 +1,76 @@
+{
+ "id": "bookcase-pair-ply2500",
+ "title": "Pair of bookcases 800 x 2020 x 280",
+ "category": "designed",
+ "furniture": "Two open bookcases, all show faces grain-locked",
+ "why": "Narrow grain-locked parts on the European 2500 x 1250 sheet; strip-friendly if lengths are grouped",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18-2500",
+   "name": "Birch plywood 18 mm, 2500 x 1250",
+   "material": "Plywood",
+   "length_mm": 2500.0,
+   "width_mm": 1250.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Bookcase side",
+   "board": "PLY18-2500",
+   "length_mm": 2020.0,
+   "width_mm": 280.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Bookcase top/bottom",
+   "board": "PLY18-2500",
+   "length_mm": 764.0,
+   "width_mm": 280.0,
+   "quantity": 4,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Fixed shelf",
+   "board": "PLY18-2500",
+   "length_mm": 764.0,
+   "width_mm": 260.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Adjustable shelf",
+   "board": "PLY18-2500",
+   "length_mm": 762.0,
+   "width_mm": 255.0,
+   "quantity": 8,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Plinth",
+   "board": "PLY18-2500",
+   "length_mm": 764.0,
+   "width_mm": 80.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Back rail",
+   "board": "PLY18-2500",
+   "length_mm": 764.0,
+   "width_mm": 60.0,
+   "quantity": 4,
+   "grain_direction": "any"
+  }
+ ]
+}

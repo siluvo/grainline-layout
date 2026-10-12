@@ -1,0 +1,6 @@
+include PROVENANCE.md
+recursive-include examples *.json
+recursive-include tests *.py
+recursive-include tools *.py
+recursive-include benchmarks *.json *.md
+global-exclude __pycache__ *.py[cod]

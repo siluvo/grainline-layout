@@ -1,0 +1,227 @@
+{
+ "id": "cabinet-set-49",
+ "title": "Combination cabinet set (wardrobe, bookcase, TV unit, desk)",
+ "category": "designed",
+ "furniture": "Wardrobe 900x2000x550, bookcase 800x1800x300, TV unit 1600x450x400, desk 1200x600",
+ "why": "Six grain-locked parts near 2 m must be paired with small fillers; a 5-sheet plywood solution exists (84.6% utilisation) but sheet-by-sheet greedy packing finds 6",
+ "units": "mm",
+ "kerf_mm": 3.0,
+ "boards": [
+  {
+   "code": "PLY18",
+   "name": "Birch plywood 18 mm, 2440 x 1220",
+   "material": "Plywood",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "long",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  },
+  {
+   "code": "MDF18",
+   "name": "MDF 18 mm, 2440 x 1220",
+   "material": "MDF",
+   "length_mm": 2440.0,
+   "width_mm": 1220.0,
+   "thickness_mm": 18.0,
+   "grain_axis": "none",
+   "trim_mm": {
+    "top": 0.0,
+    "bottom": 0.0,
+    "left": 0.0,
+    "right": 0.0
+   }
+  }
+ ],
+ "parts": [
+  {
+   "name": "Wardrobe side",
+   "board": "PLY18",
+   "length_mm": 2000.0,
+   "width_mm": 550.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Wardrobe top/bottom",
+   "board": "PLY18",
+   "length_mm": 864.0,
+   "width_mm": 550.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Wardrobe fixed shelf",
+   "board": "PLY18",
+   "length_mm": 864.0,
+   "width_mm": 530.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Wardrobe door",
+   "board": "PLY18",
+   "length_mm": 1990.0,
+   "width_mm": 446.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Bookcase side",
+   "board": "PLY18",
+   "length_mm": 1800.0,
+   "width_mm": 300.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Bookcase top/bottom",
+   "board": "PLY18",
+   "length_mm": 764.0,
+   "width_mm": 300.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Bookcase shelf",
+   "board": "PLY18",
+   "length_mm": 764.0,
+   "width_mm": 280.0,
+   "quantity": 4,
+   "grain_direction": "any"
+  },
+  {
+   "name": "TV unit top",
+   "board": "PLY18",
+   "length_mm": 1600.0,
+   "width_mm": 400.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "TV unit bottom",
+   "board": "PLY18",
+   "length_mm": 1564.0,
+   "width_mm": 400.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "TV unit side",
+   "board": "PLY18",
+   "length_mm": 432.0,
+   "width_mm": 400.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "TV unit divider",
+   "board": "PLY18",
+   "length_mm": 414.0,
+   "width_mm": 380.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "TV unit door",
+   "board": "PLY18",
+   "length_mm": 420.0,
+   "width_mm": 396.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "TV drawer front",
+   "board": "PLY18",
+   "length_mm": 520.0,
+   "width_mm": 180.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Desk top",
+   "board": "PLY18",
+   "length_mm": 1200.0,
+   "width_mm": 600.0,
+   "quantity": 1,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Desk leg panel",
+   "board": "PLY18",
+   "length_mm": 720.0,
+   "width_mm": 580.0,
+   "quantity": 2,
+   "grain_direction": "length"
+  },
+  {
+   "name": "Desk modesty panel",
+   "board": "PLY18",
+   "length_mm": 1164.0,
+   "width_mm": 300.0,
+   "quantity": 1,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Drawer side",
+   "board": "MDF18",
+   "length_mm": 450.0,
+   "width_mm": 150.0,
+   "quantity": 4,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Drawer front/back",
+   "board": "MDF18",
+   "length_mm": 484.0,
+   "width_mm": 150.0,
+   "quantity": 4,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Drawer bottom",
+   "board": "MDF18",
+   "length_mm": 484.0,
+   "width_mm": 432.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Wardrobe plinth",
+   "board": "MDF18",
+   "length_mm": 864.0,
+   "width_mm": 80.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Bookcase plinth",
+   "board": "MDF18",
+   "length_mm": 764.0,
+   "width_mm": 80.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "TV unit plinth",
+   "board": "MDF18",
+   "length_mm": 1564.0,
+   "width_mm": 80.0,
+   "quantity": 2,
+   "grain_direction": "any"
+  },
+  {
+   "name": "Wardrobe back rail",
+   "board": "MDF18",
+   "length_mm": 864.0,
+   "width_mm": 100.0,
+   "quantity": 3,
+   "grain_direction": "any"
+  }
+ ]
+}

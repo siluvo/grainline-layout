@@ -50,3 +50,12 @@ width for sub-kerf margins, and replay-validate default sequences before returni
 them. The desk case now has 19 cuts and releases all 10 parts from one sheet.
 Zero-cut stock-sized parts are accepted explicitly. Tests cover all four edges,
 sub-kerf margins, zero kerf, missing/reordered steps, child geometry and centerlines.
+
+## Pattern search, 2026-10-13
+
+A comparison with PackingSolver showed two cases where this package used one sheet
+more than a proven optimum (`syn-rotation-allowed` and `garage-cabinets-imperial`).
+The fixed-sheet search placed parts one at a time in a random order and never found
+a split for either. `_internal/sheet_partition_search.py` now falls back to sampling
+single-sheet patterns and choosing a set that covers the demand, which finds both.
+This change is in the package only; the website engine has not been updated yet.

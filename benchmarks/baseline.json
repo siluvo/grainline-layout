@@ -65,7 +65,7 @@
    "PLY34-48x96": {
     "pieces": 41,
     "area_lower_bound": 5,
-    "grainline_sheets": 6
+    "grainline_sheets": 5
    }
   }
  },
@@ -160,7 +160,7 @@
    "PLY18": {
     "pieces": 24,
     "area_lower_bound": 4,
-    "grainline_sheets": 5
+    "grainline_sheets": 4
    }
   }
  },

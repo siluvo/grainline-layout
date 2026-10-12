@@ -15,63 +15,71 @@ with 79 saw cuts in a checked order. Drawn by `tools/render_svg.py`.*
 ## Is this worth your time?
 
 If you searched for a cut-list or sheet-nesting solver, you are probably choosing
-between a few small projects and writing one yourself. We compared before
-publishing, so you can decide from numbers.
+between a few projects and writing one yourself. We compared before publishing,
+so you can decide from numbers.
 
-**What we compared against.** The two approaches most open-source cut optimizers
-use: a greedy guillotine packer (best-area-fit) and a genetic algorithm over part
-order. We ran both as implemented in
-[CutStock](https://github.com/orohde/CutStock), unmodified and at its default
-settings, on the 17 furniture cases in [`benchmarks/`](benchmarks/README.md) with
-the same kerf, trim and grain rules.
+**What we compared against**, on the 17 furniture cases in
+[`benchmarks/`](benchmarks/README.md), with the same kerf, trim and grain rules:
 
-| 17 cases, 555 parts, 21 material groups | Sheets used | Solve time, all cases |
-|---|---:|---:|
-| Area lower bound (not always reachable) | 61 | |
-| **Grainline**, default preset | **72** | about 30 s |
-| Genetic algorithm (CutStock GA) | 73 | about 12 s |
-| Greedy guillotine (CutStock nested) | 78 | under 0.1 s |
+- [PackingSolver](https://github.com/fontanf/packingsolver), the strongest
+  open-source solver we know of for guillotine cutting. It is a C++ research
+  solver and it also proves lower bounds.
+- A genetic algorithm over part order and a greedy guillotine packer, the two
+  approaches most small cut optimizers use, as implemented in
+  [CutStock](https://github.com/orohde/CutStock).
+
+| 17 cases, 555 parts, 21 materials | Sheets used |
+|---|---:|
+| Proven minimum possible (PackingSolver's bound) | at least 65 |
+| PackingSolver, 10 s per material | 70 |
+| **Grainline**, default preset | **70** |
+| Genetic algorithm (CutStock GA) | 73 |
+| Greedy guillotine (CutStock nested) | 78 |
 
 What that table does and does not show:
 
-- **Sheet count.** Grainline never used more sheets than either method on any
-  material. It used fewer than the greedy packer on 6 of 21 materials and fewer
-  than the genetic algorithm on 1. Against a genetic algorithm it is level on
-  most jobs.
-- **Speed.** Grainline is the slowest of the three: typically 1 to 2 seconds per
-  job and up to 7 seconds here. If you need thousands of layouts per second, use
-  a greedy packer.
-- **Offcuts.** We measured the largest rectangular offcut each method leaves when
-  sheet counts are equal. Grainline's was larger about as often as it was smaller.
-  We do not claim better offcuts.
-- **Optimality.** It is a heuristic. 12 of these 21 materials reach the area lower
-  bound, which proves those are optimal; the rest may or may not be.
+- **Sheet count.** Grainline matches PackingSolver on all 21 materials. 17 of them
+  are proven optimal; on the other 4 neither solver found better or proved a bound.
+- **We tuned on these cases.** Before this comparison Grainline used one sheet more
+  than PackingSolver on two of them. The comparison is why a pattern search was
+  added, and both now match. Matching cases you have fixed against is weaker
+  evidence than matching unseen ones, so expect PackingSolver to win now and then
+  on your own jobs.
+- **Speed.** PackingSolver is faster: it solved 17 of the 21 materials in under a
+  second each, with proof. Grainline takes 1 to 2 seconds for a typical job and up
+  to 7 seconds here. A greedy packer takes milliseconds.
+- **Offcuts.** We measured the largest rectangular offcut left when sheet counts
+  are equal. Grainline's was larger than PackingSolver's on 8 materials and
+  smaller on 7. We do not claim better offcuts.
 
-A coding model can write a random-search packer in one sitting, and for a single
-sheet count that is a fair alternative. One did find the five-sheet answer above
-before Grainline did, with a two-minute budget, and Grainline's fixed-sheet search
-was added because of it. What took us longer than the packing is the list below.
+**If all you need is the fewest sheets, fast, and you can run a C++ binary, use
+PackingSolver.** It is the better packer.
 
-**What you get here that a packer alone does not give you:**
+A coding model can also write a random-search packer in one sitting, and for a
+single sheet count that is a fair alternative. One did find the five-sheet answer
+above before Grainline did, with a two-minute budget, and Grainline's fixed-sheet
+search was added because of it.
+
+**What this package is for** is the step after packing, in something you can
+`pip install`:
 
 - **A cutting sequence, checked.** Each sheet comes with ordered through-cuts.
   Before a result is returned, the sequence is replayed cut by cut: every cut must
   act on a workpiece that exists, miss every finished part, and leave every part
   separated at the end. A layout that fails is rejected, not returned with a warning.
+- **Woodworking input.** You say which way the sheet's grain runs and whether each
+  part's length or width must follow it, and give finished sizes for edge-banded
+  parts. A general solver can respect the same constraints, but you have to turn
+  them into fixed orientations and cut sizes yourself.
 - **Saw-friendly layouts.** Every sheet is guillotine-cuttable, so it can be broken
-  down with a track saw, table saw or panel saw using edge-to-edge cuts.
-- **Grain direction as a hard rule.** The sheet has a grain axis and each part says
-  whether its length or width must follow it. A part is only rotated when that is
-  allowed.
-- **Kerf, edge trim and edge banding.** Blade width is kept between parts, unusable
-  sheet edges can be trimmed off, and banded parts are laid out at the size
-  actually cut.
+  down with a track saw, table saw or panel saw using edge-to-edge cuts, with the
+  blade width kept between parts.
 - **An independent validator.** `grainline validate` checks any result against its
   problem, so you do not have to trust the solver's own report.
 - **Reproducible runs.** The default budget is a fixed number of trials, not a time
   limit, so the same input gives the same layout.
-- **Nothing to set up.** Python 3.10+ standard library only: no account, database,
-  configuration or network access. Apache-2.0.
+- **Nothing to set up.** Pure Python 3.10+ standard library: no compiler, binary,
+  account, database or network access. Apache-2.0.
 
 ## The web app does the rest
 
@@ -162,6 +170,8 @@ partition search. They are **not** a greedy / genetic algorithm switch.
 - **Partition trials:** randomized search for how to divide parts across a smaller
   fixed number of sheets. Maximum trials **per target sheet count per material**;
   stops earlier when enough distinct plans are found. Set 0 to disable this fallback.
+  When those trials find nothing, a second search with about the same budget samples
+  single-sheet patterns and looks for a set of them that holds every part.
 - **Partition plans:** maximum distinct splits considered per target. The first
   valid plan reaching that target is accepted; the budget is a cap, not required work.
 - **Random seed:** `random_seed` / `--random-seed` defaults to 20261011, affects only

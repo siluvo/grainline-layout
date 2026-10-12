@@ -147,6 +147,16 @@ class CoreTests(unittest.TestCase):
         self.assertGreater(stats[0]['trials_executed'], 0)
         self.assertLessEqual(stats[0]['trials_executed'], 6000)
 
+    def test_pattern_search_finds_a_split_the_packer_misses(self):
+        problem = json.loads((ROOT / 'examples/syn-rotation-allowed.json').read_text(encoding='utf-8'))
+        result = optimize(problem)
+        self.assertEqual(result['sheets_used'], 4)
+        self.assertEqual(validate(problem, result), [])
+        self.assertEqual(geometry(result), geometry(optimize(problem)))
+        stats = result['telemetry']['board_summaries'][0]['sheet_plan_fallback']['target_stats'][0]
+        self.assertEqual(stats['plans_found'], 1)
+        self.assertGreater(stats['pattern_samples'], 0)
+
     def test_explicit_options_replace_embedded_options(self):
         problem = {**small_problem(), 'options': {'max_sheets': 0}}
         result = optimize(problem, options=SearchOptions.from_preset('fast', random_seed=7))

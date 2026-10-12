@@ -1,6 +1,6 @@
-Grainline Core
+Siluvo Grainline Layout
 Copyright 2026 Siluvo LLC
 
 This package contains the Grainline rectangular sheet layout engine extracted
-from the Grainline web application (https://siluvo.com). The package is licensed under the Apache License, Version 2.0.
+from the Grainline web application (https://siluvo.com/grainline). The package is licensed under the Apache License, Version 2.0.
 The Grainline and Siluvo names and logos are not licensed as trademarks.

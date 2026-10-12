@@ -1,26 +1,98 @@
-# Grainline Layout
+# Siluvo Grainline Layout
 
-Grain-aware sheet cutting layouts for plywood, MDF and other panel stock: give it
-a cut list, get back which part goes on which sheet, plus a step-by-step
-guillotine cutting sequence you can follow on a table saw or panel saw. Python API
-and a local JSON CLI.
+Siluvo Grainline turns a woodworking cut list into sheet layouts you can cut:
+which part goes on which sheet of plywood or MDF, with grain direction respected,
+and the order of saw cuts that releases every part. This repository is the layout
+engine behind the Grainline web app at [Siluvo](https://siluvo.com/grainline?utm_source=github&utm_medium=readme&utm_campaign=grainline-layout), as a
+dependency-free Python package and command-line tool.
 
-This is the layout engine behind [Grainline](https://siluvo.com), the cut-list
-optimizer by Siluvo LLC. The website adds the project editor, cutting animation
-and printable plans; this package is the solver on its own.
+[![All six sheets of the 49-part cabinet example](docs/cabinet-set-49.svg)](https://siluvo.com/grainline?utm_source=github&utm_medium=readme&utm_campaign=grainline-layout)
 
-- **Grain direction is a constraint, not an afterthought.** Parts are only rotated
-  when their grain setting allows it.
-- **Every layout is guillotine-cuttable**, and the cutting sequence is replayed
-  and checked before it is returned.
-- **Independent validator included.** `grainline validate` checks any result
-  against its problem, so you can verify layouts from this or another solver.
-- **No dependencies.** Python 3.10+ standard library only: no account, database,
-  configuration or network access.
-- **Published test cases.** See [`benchmarks/`](benchmarks/README.md) for the
-  furniture cut lists and the sheet counts this version reaches on them.
+*`examples/cabinet-set-49.json`: a wardrobe, bookcase, TV unit and desk, 49 parts.
+Five sheets of plywood, which is the fewest the part area allows, plus one of MDF,
+with 79 saw cuts in a checked order. Drawn by `tools/render_svg.py`.*
 
-Licensed under Apache-2.0; see `LICENSE` and `NOTICE`.
+## Is this worth your time?
+
+If you searched for a cut-list or sheet-nesting solver, you are probably choosing
+between a few small projects and writing one yourself. We compared before
+publishing, so you can decide from numbers.
+
+**What we compared against.** The two approaches most open-source cut optimizers
+use: a greedy guillotine packer (best-area-fit) and a genetic algorithm over part
+order. We ran both as implemented in
+[CutStock](https://github.com/orohde/CutStock), unmodified and at its default
+settings, on the 17 furniture cases in [`benchmarks/`](benchmarks/README.md) with
+the same kerf, trim and grain rules.
+
+| 17 cases, 555 parts, 21 material groups | Sheets used | Solve time, all cases |
+|---|---:|---:|
+| Area lower bound (not always reachable) | 61 | |
+| **Grainline**, default preset | **72** | about 30 s |
+| Genetic algorithm (CutStock GA) | 73 | about 12 s |
+| Greedy guillotine (CutStock nested) | 78 | under 0.1 s |
+
+What that table does and does not show:
+
+- **Sheet count.** Grainline never used more sheets than either method on any
+  material. It used fewer than the greedy packer on 6 of 21 materials and fewer
+  than the genetic algorithm on 1. Against a genetic algorithm it is level on
+  most jobs.
+- **Speed.** Grainline is the slowest of the three: typically 1 to 2 seconds per
+  job and up to 7 seconds here. If you need thousands of layouts per second, use
+  a greedy packer.
+- **Offcuts.** We measured the largest rectangular offcut each method leaves when
+  sheet counts are equal. Grainline's was larger about as often as it was smaller.
+  We do not claim better offcuts.
+- **Optimality.** It is a heuristic. 12 of these 21 materials reach the area lower
+  bound, which proves those are optimal; the rest may or may not be.
+
+A coding model can write a random-search packer in one sitting, and for a single
+sheet count that is a fair alternative. One did find the five-sheet answer above
+before Grainline did, with a two-minute budget, and Grainline's fixed-sheet search
+was added because of it. What took us longer than the packing is the list below.
+
+**What you get here that a packer alone does not give you:**
+
+- **A cutting sequence, checked.** Each sheet comes with ordered through-cuts.
+  Before a result is returned, the sequence is replayed cut by cut: every cut must
+  act on a workpiece that exists, miss every finished part, and leave every part
+  separated at the end. A layout that fails is rejected, not returned with a warning.
+- **Saw-friendly layouts.** Every sheet is guillotine-cuttable, so it can be broken
+  down with a track saw, table saw or panel saw using edge-to-edge cuts.
+- **Grain direction as a hard rule.** The sheet has a grain axis and each part says
+  whether its length or width must follow it. A part is only rotated when that is
+  allowed.
+- **Kerf, edge trim and edge banding.** Blade width is kept between parts, unusable
+  sheet edges can be trimmed off, and banded parts are laid out at the size
+  actually cut.
+- **An independent validator.** `grainline validate` checks any result against its
+  problem, so you do not have to trust the solver's own report.
+- **Reproducible runs.** The default budget is a fixed number of trials, not a time
+  limit, so the same input gives the same layout.
+- **Nothing to set up.** Python 3.10+ standard library only: no account, database,
+  configuration or network access. Apache-2.0.
+
+## The web app does the rest
+
+This package stops at layout and cutting data in JSON. If the goal is to stand at
+a sheet of plywood and cut, the [Grainline web app](https://siluvo.com/grainline?utm_source=github&utm_medium=readme&utm_campaign=grainline-layout) is the same family of
+engine with the parts that make a plan usable in the shop:
+
+[![A Grainline layout with dimension lines and kerf marked](https://siluvo-grainline-prod.sfo3.cdn.digitaloceanspaces.com/grainline/docs-assets/layout_annotations_1.jpg)](https://siluvo.com/grainline?utm_source=github&utm_medium=readme&utm_campaign=grainline-layout)
+
+- **Dimensioned layouts.** Click a part to see its size, its distance from the
+  sheet edges and the kerf around it, with the numbers placed so they stay readable.
+- **PDF export for the shop.** Print the plan and take it to the saw. Export is
+  free and has no watermark.
+- **Cut-flow animation.** Watch a sheet broken down step by step, or pick one part
+  and see how it is released.
+- **Finished-size edge banding.** Mark the banded edges; cut sizes and the banding
+  you need to buy are worked out for you.
+- **Parts in, without retyping.** Paste rows or import CSV or XLSX, with a preview
+  that catches wrong boards and thickness mismatches. Metric and imperial.
+
+It runs in the browser and can be tried without an account.
 
 ## Install
 
@@ -182,3 +254,9 @@ python tools/check_cases.py benchmarks/cases --baseline benchmarks/baseline.json
 `tools/check_cases.py` solves every case, validates the result and fails when a
 material needs more sheets than the recorded baseline. See `PROVENANCE.md` for how
 this package relates to the engine running on the website.
+
+## Name and license
+
+Code is licensed under Apache-2.0. "Siluvo" and "Grainline" are names used by
+Siluvo LLC for this software and are not licensed as trademarks; see `NOTICE`.
+Other products named Grainline exist in other fields and are unrelated.

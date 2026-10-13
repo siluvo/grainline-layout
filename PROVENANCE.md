@@ -58,4 +58,5 @@ more than a proven optimum (`syn-rotation-allowed` and `garage-cabinets-imperial
 The fixed-sheet search placed parts one at a time in a random order and never found
 a split for either. `_internal/sheet_partition_search.py` now falls back to sampling
 single-sheet patterns and choosing a set that covers the demand, which finds both.
-This change is in the package only; the website engine has not been updated yet.
+The website engine received the same search on the same day. It runs under a time
+budget, so it finds the `garage-cabinets-imperial` split on some runs and not others.

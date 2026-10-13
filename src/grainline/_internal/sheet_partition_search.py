@@ -11,9 +11,6 @@ the split and lets the frontier engine lay out each sheet.
 
 Two searches run in turn. The first places pieces one at a time in a random order. When it finds
 nothing, the second samples full single-sheet patterns and picks a set that holds every piece.
-
-Two searches run in turn. The first places pieces one at a time in a random order. When it finds
-nothing, the second samples full single-sheet patterns and picks a set that holds every piece.
 """
 from __future__ import annotations
 
@@ -173,6 +170,7 @@ def _cover_demand(
     areas: Sequence[float],
     sheet_count: int,
     stats: Dict[str, Any],
+    deadline: float | None = None,
 ) -> List[int] | None:
     """Pick at most `sheet_count` patterns, repeats allowed, that together hold every piece."""
     nodes = 0
@@ -182,6 +180,8 @@ def _cover_demand(
         if all(count <= 0 for count in need):
             return []
         if sheets_left == 0 or nodes >= PATTERN_NODE_LIMIT:
+            return None
+        if deadline is not None and time.perf_counter() > deadline:
             return None
         nodes += 1
         need_area = sum(count * area for count, area in zip(need, areas) if count > 0)
@@ -237,16 +237,18 @@ def _find_pattern_plan(
     demand = [len(ids) for ids in members]
     areas = [float(candidates[0]["width"]) * float(candidates[0]["height"]) for candidates in kinds]
 
+    # With a time budget, sampling stops early enough to leave the covering step its share.
+    sampling_deadline = None if deadline is None else deadline - 0.3 * max(0.0, deadline - time.perf_counter())
     found: Dict[Tuple[int, ...], Tuple[PlannedSheet, List[int]]] = {}
     sampled = 0
     for sampled in range(1, max(0, int(max_samples)) + 1):
-        if deadline is not None and sampled % 64 == 0 and time.perf_counter() > deadline:
+        if sampling_deadline is not None and sampled % 64 == 0 and time.perf_counter() > sampling_deadline:
             break
         counts, sheet, placed_kinds = _sample_pattern(kinds, demand, sheet_length, sheet_width, kerf, rng)
         found.setdefault(counts, (sheet, placed_kinds))
     patterns = sorted(found, key=lambda counts: -sum(count * area for count, area in zip(counts, areas)))[:PATTERN_KEEP]
     stats.update(pattern_samples=sampled, patterns_found=len(found))
-    chosen = _cover_demand(patterns, demand, areas, sheet_count, stats)
+    chosen = _cover_demand(patterns, demand, areas, sheet_count, stats, deadline)
     if chosen is None:
         return None
 

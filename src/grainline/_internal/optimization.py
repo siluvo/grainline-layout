@@ -1141,7 +1141,9 @@ def run_optimization(
         nonlocal timed_out
         if timeout_seconds is None:
             return False
-        if (time.monotonic() - started_at) > float(timeout_seconds):
+        # perf_counter, not monotonic: on Windows before Python 3.13 monotonic
+        # ticks every ~15.6 ms, so a short run can finish with zero elapsed time.
+        if time.perf_counter() >= deadline:
             timed_out = True
             return True
         return False
@@ -1149,7 +1151,7 @@ def run_optimization(
     def _remaining_budget_ms() -> float | None:
         if timeout_seconds is None:
             return None
-        return max(0.0, (float(timeout_seconds) - (time.monotonic() - started_at)) * 1000.0)
+        return max(0.0, (deadline - time.perf_counter()) * 1000.0)
 
     board_results = []
     board_telemetry: list[dict[str, Any]] = []
@@ -1490,7 +1492,7 @@ def run_optimization(
             and int(result.get("sheets_used") or 0) > lb
         ):
             current_sheets = int(result.get("sheets_used") or 0)
-            plan_started = time.monotonic()
+            plan_started = time.perf_counter()
             sheet_plan_summary = {"from_sheets": current_sheets, "tried_targets": [], "accepted_target": None, "plans_laid_out": 0, "target_stats": []}
             # Trial counts are deterministic by default; optional wall-clock caps are explicit.
             fallback_budget_s = options.partition_time_limit
@@ -1498,7 +1500,7 @@ def run_optimization(
                 utilisation_needed = total_area_parts / (plan_target * sheet_area) if sheet_area > 0 else 1.0
                 if utilisation_needed > SHEET_PLAN_MAX_UTILISATION:
                     continue
-                budget_left_s = None if fallback_budget_s is None else fallback_budget_s - (time.monotonic() - plan_started)
+                budget_left_s = None if fallback_budget_s is None else fallback_budget_s - (time.perf_counter() - plan_started)
                 remaining_ms = _remaining_budget_ms()
                 if remaining_ms is not None:
                     remaining_s = remaining_ms / 1000.0
@@ -1536,7 +1538,7 @@ def run_optimization(
                 result = planned_result
                 sheet_plan_summary["accepted_target"] = int(plan_target)
                 break
-            sheet_plan_summary["dt_ms"] = round((time.monotonic() - plan_started) * 1000.0, 1)
+            sheet_plan_summary["dt_ms"] = round((time.perf_counter() - plan_started) * 1000.0, 1)
             _log_optimize_algo(
                 "sheet_plan_fallback",
                 board_id=board_id,

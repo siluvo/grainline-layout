@@ -78,7 +78,7 @@ Reading it:
   in total, greedy under 0.1 s. Treat these as rough.
 - CutStock is a small project and its defaults were not tuned for these cases.
 
-Grainline and PackingSolver were run on 2026-10-13 and CutStock on 2026-10-11,
+All three were run on 2026-10-13,
 with Python 3.12 on Windows.
 
 ### Reproduce

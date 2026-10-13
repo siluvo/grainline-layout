@@ -1,3 +1,10 @@
+<a href="https://siluvo.com/grainline?utm_source=github&utm_medium=readme&utm_campaign=grainline-layout">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/siluvo-logo-horizontal-birch.svg">
+    <img src="docs/brand/siluvo-logo-horizontal-indigo.svg" alt="Siluvo" width="220">
+  </picture>
+</a>
+
 # Siluvo Grainline Layout
 
 Siluvo Grainline turns a woodworking cut list into sheet layouts you can cut:
@@ -269,4 +276,5 @@ this package relates to the engine running on the website.
 
 Code is licensed under Apache-2.0. "Siluvo" and "Grainline" are names used by
 Siluvo LLC for this software and are not licensed as trademarks; see `NOTICE`.
+The Siluvo logo files in `docs/brand/` are not covered by the Apache license.
 Other products named Grainline exist in other fields and are unrelated.

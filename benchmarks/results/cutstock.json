@@ -1,0 +1,534 @@
+{
+ "grainline_version": "0.1.0.dev0",
+ "preset": "balanced",
+ "cutstock_sha256": "77962978adb43562ef52b656bbc4a6ba664d303d71e19ddf5d099dc2c99c9cd5",
+ "python": "3.12.10",
+ "machine": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+ "rows": [
+  {
+   "case": "bookcase-pair-ply2500",
+   "category": "designed",
+   "material": "PLY18-2500",
+   "parts": 24,
+   "area_lower_bound": 2,
+   "grainline": {
+    "sheets": 3,
+    "largest_offcut_m2": 2.487,
+    "case_seconds": 1.071,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 3,
+    "largest_offcut_m2": 2.487,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 3,
+    "largest_offcut_m2": 2.487,
+    "seconds": 0.461,
+    "errors": []
+   }
+  },
+  {
+   "case": "cabinet-set-49",
+   "category": "designed",
+   "material": "PLY18",
+   "parts": 30,
+   "area_lower_bound": 5,
+   "grainline": {
+    "sheets": 5,
+    "largest_offcut_m2": 0.285,
+    "case_seconds": 1.973,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 6,
+    "largest_offcut_m2": 2.513,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 6,
+    "largest_offcut_m2": 1.297,
+    "seconds": 0.707,
+    "errors": []
+   }
+  },
+  {
+   "case": "cabinet-set-49",
+   "category": "designed",
+   "material": "MDF18",
+   "parts": 19,
+   "area_lower_bound": 1,
+   "grainline": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.642,
+    "case_seconds": 1.973,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.821,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.771,
+    "seconds": 0.343,
+    "errors": []
+   }
+  },
+  {
+   "case": "cube-storage-jp1820",
+   "category": "designed",
+   "material": "LAUAN12-1820",
+   "parts": 22,
+   "area_lower_bound": 3,
+   "grainline": {
+    "sheets": 3,
+    "largest_offcut_m2": 0.135,
+    "case_seconds": 1.052,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 4,
+    "largest_offcut_m2": 1.545,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 3,
+    "largest_offcut_m2": 0.215,
+    "seconds": 0.458,
+    "errors": []
+   }
+  },
+  {
+   "case": "drawer-bank-baltic1525",
+   "category": "designed",
+   "material": "BB12-1525",
+   "parts": 48,
+   "area_lower_bound": 2,
+   "grainline": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.608,
+    "case_seconds": 7.253,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.24,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.24,
+    "seconds": 0.991,
+    "errors": []
+   }
+  },
+  {
+   "case": "drawer-bank-baltic1525",
+   "category": "designed",
+   "material": "BB6-1525",
+   "parts": 12,
+   "area_lower_bound": 2,
+   "grainline": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.716,
+    "case_seconds": 7.253,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.462,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.716,
+    "seconds": 0.231,
+    "errors": []
+   }
+  },
+  {
+   "case": "floating-shelves-strips",
+   "category": "designed",
+   "material": "PLY18",
+   "parts": 52,
+   "area_lower_bound": 2,
+   "grainline": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.403,
+    "case_seconds": 4.778,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.781,
+    "seconds": 0.002,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.781,
+    "seconds": 1.125,
+    "errors": []
+   }
+  },
+  {
+   "case": "garage-cabinets-imperial",
+   "category": "designed",
+   "material": "PLY34-48x96",
+   "parts": 41,
+   "area_lower_bound": 5,
+   "grainline": {
+    "sheets": 5,
+    "largest_offcut_m2": 0.277,
+    "case_seconds": 3.708,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 7,
+    "largest_offcut_m2": 1.463,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 6,
+    "largest_offcut_m2": 0.832,
+    "seconds": 0.95,
+    "errors": []
+   }
+  },
+  {
+   "case": "kids-desk-single-sheet",
+   "category": "designed",
+   "material": "PLY18",
+   "parts": 10,
+   "area_lower_bound": 1,
+   "grainline": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.892,
+    "case_seconds": 0.51,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.652,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.677,
+    "seconds": 0.198,
+    "errors": []
+   }
+  },
+  {
+   "case": "kitchen-base-ply2440-trim",
+   "category": "designed",
+   "material": "PLY18",
+   "parts": 29,
+   "area_lower_bound": 3,
+   "grainline": {
+    "sheets": 4,
+    "largest_offcut_m2": 2.216,
+    "case_seconds": 2.068,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 4,
+    "largest_offcut_m2": 1.826,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 4,
+    "largest_offcut_m2": 1.848,
+    "seconds": 0.55,
+    "errors": []
+   }
+  },
+  {
+   "case": "kitchen-base-run-mfc2800",
+   "category": "designed",
+   "material": "MFC18-2800",
+   "parts": 48,
+   "area_lower_bound": 3,
+   "grainline": {
+    "sheets": 3,
+    "largest_offcut_m2": 1.004,
+    "case_seconds": 2.226,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 4,
+    "largest_offcut_m2": 5.421,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 3,
+    "largest_offcut_m2": 0.893,
+    "seconds": 0.988,
+    "errors": []
+   }
+  },
+  {
+   "case": "kitchen-base-run-mfc2800",
+   "category": "designed",
+   "material": "HDF3",
+   "parts": 6,
+   "area_lower_bound": 1,
+   "grainline": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.404,
+    "case_seconds": 2.226,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.404,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 1,
+    "largest_offcut_m2": 0.404,
+    "seconds": 0.128,
+    "errors": []
+   }
+  },
+  {
+   "case": "syn-grain-locked",
+   "category": "synthetic",
+   "material": "PLY18",
+   "parts": 24,
+   "area_lower_bound": 4,
+   "grainline": {
+    "sheets": 5,
+    "largest_offcut_m2": 1.213,
+    "case_seconds": 0.821,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 5,
+    "largest_offcut_m2": 0.529,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 5,
+    "largest_offcut_m2": 0.676,
+    "seconds": 0.497,
+    "errors": []
+   }
+  },
+  {
+   "case": "syn-impossible-area-bound",
+   "category": "synthetic",
+   "material": "PLY18",
+   "parts": 4,
+   "area_lower_bound": 2,
+   "grainline": {
+    "sheets": 4,
+    "largest_offcut_m2": 1.391,
+    "case_seconds": 0.005,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 4,
+    "largest_offcut_m2": 1.391,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 4,
+    "largest_offcut_m2": 1.391,
+    "seconds": 0.103,
+    "errors": []
+   }
+  },
+  {
+   "case": "syn-long-and-small",
+   "category": "synthetic",
+   "material": "PLY18",
+   "parts": 36,
+   "area_lower_bound": 4,
+   "grainline": {
+    "sheets": 4,
+    "largest_offcut_m2": 0.4,
+    "case_seconds": 1.741,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 5,
+    "largest_offcut_m2": 2.757,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 4,
+    "largest_offcut_m2": 0.4,
+    "seconds": 0.721,
+    "errors": []
+   }
+  },
+  {
+   "case": "syn-mixed-seeded",
+   "category": "synthetic",
+   "material": "PLY18",
+   "parts": 29,
+   "area_lower_bound": 4,
+   "grainline": {
+    "sheets": 6,
+    "largest_offcut_m2": 1.049,
+    "case_seconds": 2.146,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 7,
+    "largest_offcut_m2": 2.513,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 6,
+    "largest_offcut_m2": 1.074,
+    "seconds": 0.665,
+    "errors": []
+   }
+  },
+  {
+   "case": "syn-repeated-cabinets",
+   "category": "synthetic",
+   "material": "PLY18",
+   "parts": 36,
+   "area_lower_bound": 5,
+   "grainline": {
+    "sheets": 6,
+    "largest_offcut_m2": 0.822,
+    "case_seconds": 2.015,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 6,
+    "largest_offcut_m2": 0.729,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 6,
+    "largest_offcut_m2": 1.037,
+    "seconds": 0.769,
+    "errors": []
+   }
+  },
+  {
+   "case": "syn-rotation-allowed",
+   "category": "synthetic",
+   "material": "PLY18",
+   "parts": 24,
+   "area_lower_bound": 4,
+   "grainline": {
+    "sheets": 4,
+    "largest_offcut_m2": 0.326,
+    "case_seconds": 1.069,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 5,
+    "largest_offcut_m2": 1.0,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 5,
+    "largest_offcut_m2": 0.676,
+    "seconds": 0.497,
+    "errors": []
+   }
+  },
+  {
+   "case": "tv-wall-unit-ply3050",
+   "category": "designed",
+   "material": "PLY18-3050",
+   "parts": 24,
+   "area_lower_bound": 3,
+   "grainline": {
+    "sheets": 3,
+    "largest_offcut_m2": 2.198,
+    "case_seconds": 0.308,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 3,
+    "largest_offcut_m2": 2.225,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 3,
+    "largest_offcut_m2": 1.272,
+    "seconds": 0.491,
+    "errors": []
+   }
+  },
+  {
+   "case": "wardrobe-tall-mfc2800",
+   "category": "designed",
+   "material": "MFC18-2800",
+   "parts": 35,
+   "area_lower_bound": 3,
+   "grainline": {
+    "sheets": 4,
+    "largest_offcut_m2": 2.629,
+    "case_seconds": 1.117,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 4,
+    "largest_offcut_m2": 2.96,
+    "seconds": 0.001,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 4,
+    "largest_offcut_m2": 2.684,
+    "seconds": 0.713,
+    "errors": []
+   }
+  },
+  {
+   "case": "wardrobe-tall-mfc2800",
+   "category": "designed",
+   "material": "HDF3",
+   "parts": 2,
+   "area_lower_bound": 2,
+   "grainline": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.805,
+    "case_seconds": 1.117,
+    "errors": []
+   },
+   "cutstock_nested": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.805,
+    "seconds": 0.0,
+    "errors": []
+   },
+   "cutstock_ga": {
+    "sheets": 2,
+    "largest_offcut_m2": 0.805,
+    "seconds": 0.065,
+    "errors": []
+   }
+  }
+ ]
+}
